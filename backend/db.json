@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "username": "Nisarg",
+      "email": "nisargprajapati54@gmail.com",
+      "password": "$2b$10$1nIr51dpi.NF9jZICUyq2OEipm48wJv12y/gyB.e0mf.wqWsDpJ/u",
+      "gender": "male",
+      "role": "user",
+      "id": "a85hm4-yCKs"
+    }
+  ],
+  "courses": []
+}
