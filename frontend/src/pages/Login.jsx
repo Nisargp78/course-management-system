@@ -24,9 +24,14 @@ const Login = () => {
     );
 
     let user = res.data[0];
+    if (res.data.length === 0) {
+      toast.error("Access Denied!!");
+      return;
+    }
+    
     let ValidPassword = await bcrypt.compare(password, user.password);
 
-    if (!user || !ValidPassword) {
+    if (!user || !ValidPassword || user.role !== role) {
       toast.error("Invalid credentials!!");
       return;
     }

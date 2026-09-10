@@ -33,12 +33,20 @@ const NavContainer = () => {
       )}
 
       {user ? (
-        <span
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white"
-          title={user.username}
-        >
-          {user.username?.charAt(0).toUpperCase()}
-        </span>
+        <div className="flex items-center gap-4">
+          <span
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white"
+            title={user.username}
+          >
+            {user.username?.charAt(0).toUpperCase()}
+          </span>
+          <Link
+            to="/login"
+            className="rounded-lg bg-blue-600 px-5 py-2 text-white transition duration-300 hover:bg-blue-700 hover:shadow-lg"
+          >
+            Logout
+          </Link>
+        </div>
       ) : (
         <Link
           to="/login"

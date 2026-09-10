@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const Footer = () => {
   return (
     <footer className="bg-gray-900 px-8 py-12 text-white">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-4">
+      <div className="flex flex-col gap-10 md:flex-row md:justify-between">
 
         {/* Brand */}
         <div>
@@ -16,7 +16,7 @@ const Footer = () => {
             Learn new skills, improve your knowledge, and build your future
             with our online courses.
           </p>
-        </div>
+        </div>  
 
         {/* Quick Links */}
         <div>
@@ -39,23 +39,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Account */}
-        <div>
-          <h3 className="mb-4 text-lg font-semibold">
-            Account
-          </h3>
-
-          <div className="flex flex-col gap-3 text-gray-400">
-            <Link className="transition hover:text-white" to="/signup">
-              Sign Up
-            </Link>
-
-            <Link className="transition hover:text-white" to="/login">
-              Login
-            </Link>
-          </div>
-        </div>
-
         {/* Contact */}
         <div>
           <h3 className="mb-4 text-lg font-semibold">
@@ -63,11 +46,11 @@ const Footer = () => {
           </h3>
 
           <p className="mb-2 text-gray-400">
-            Email: support@coursehub.com
+            Email: support@codecrafters.com
           </p>
 
           <p className="text-gray-400">
-            Phone: +91 98765 43210
+            Phone: +91 12345 67890
           </p>
         </div>
       </div>
