@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import bcrypt from "bcryptjs";
+import { userContext } from "../context/UserContext";
 
 const Login = () => {
+  let { login } = useContext(userContext);
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [role, setRole] = useState("user");
-  let navigate = useNavigate(null);
-
+  let navigate = useNavigate(null); 
   let handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -30,6 +31,7 @@ const Login = () => {
       return;
     }
 
+    login(user);
     navigate("/");
     toast.success("User Login Successful!!");
   };
